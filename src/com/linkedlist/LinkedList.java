@@ -15,7 +15,6 @@ public class LinkedList<T> {
 	        }
 
 	    }
-	    //to display the elements
 	    public void display() {
 	        Node<T> temp = head;
 	        while (temp != null) {
@@ -25,7 +24,17 @@ public class LinkedList<T> {
 	        System.out.println();
 	    }
 	    
-	  
+	    public void append(){
+	        T key = null;
+	        Node<T> newNode = new Node<>(key);
+	        if (head == null){
+	            head=newNode;
+	            tail= newNode;
+	        }else {
+	            tail.next = newNode;
+	            tail = newNode;
+	        }
+	    }
 	    
 	    
 }
