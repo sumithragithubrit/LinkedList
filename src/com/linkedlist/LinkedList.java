@@ -52,5 +52,21 @@ public class LinkedList<T> {
 
 	    }
 	    
+	    //deleting first element in a linkedlist using pop method
+	    
+	    public void  pop() {
+	        if (head == null) {
+	            System.out.println("List is empty");
+
+	        } else {
+
+	            if (head != tail) {
+	                head = head.next;
+	            }
+	            else {
+	                head = tail = null;
+	            }
+	        }
+	    }
 	    
 }
